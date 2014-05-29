@@ -1,0 +1,35 @@
+{
+  "name": "turf-convex",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Turfjs/turf-convex.git"
+  },
+  "keywords": [
+    "turf",
+    "gis"
+  ],
+  "author": "Morgan Herlocker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Turfjs/turf-convex/issues"
+  },
+  "homepage": "https://github.com/Turfjs/turf-convex",
+  "devDependencies": {
+    "glob": "~4.0.0",
+    "tape": "~2.13.1"
+  },
+  "dependencies": {
+    "turf-tin": "0.0.1",
+    "turf-buffer": "0.0.1",
+    "turf-merge": "0.0.0"
+  }
+}
