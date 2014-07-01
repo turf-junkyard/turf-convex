@@ -24,12 +24,12 @@
   },
   "homepage": "https://github.com/Turfjs/turf-convex",
   "devDependencies": {
-    "glob": "~4.0.0",
-    "tape": "~2.13.1"
+    "glob": "~4.0.3",
+    "tape": "~2.13.3"
   },
   "dependencies": {
-    "turf-tin": "0.0.1",
-    "turf-buffer": "0.0.1",
-    "turf-merge": "0.0.0"
+    "turf-tin": "0.0.2",
+    "turf-buffer": "0.1.0",
+    "turf-merge": "0.0.2"
   }
 }
