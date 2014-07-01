@@ -4,6 +4,26 @@ turf-convex
 
 Takes a set of points and returns a convex hull polygon.
 
+###Install
+
+```sh
+npm install turf-convex
+```
+
+###Parameters
+
+|name|description|
+|---|---|
+|points|A FeatureCollection of Point Features|
+
+###Usage
+
+```js
+convex(pts)
+```
+
+###Example
+
 ```js
 var convex = require('turf-convex')
 var fs = require('fs')
