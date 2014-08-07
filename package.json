@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "turf-tin": "0.0.2",
-    "turf-buffer": "0.1.0",
     "turf-merge": "0.0.2"
   }
 }

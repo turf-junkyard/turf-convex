@@ -1,10 +1,8 @@
 // 1. run tin on points
 // 2. merge the tin
-//var topojson = require('')
 var t = {}
-t.tin = require('turf-tin')
-t.merge = require('turf-merge')
-t.buffer = require('turf-buffer')
+t.tin = require('turf-tin');
+t.merge = require('turf-merge');
 
 module.exports = function(points, done){
   var tinPolys = t.tin(points, null),
@@ -27,4 +25,4 @@ module.exports = function(points, done){
   }
 
   return mergePolys;
-}
+};
