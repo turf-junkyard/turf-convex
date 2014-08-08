@@ -27,8 +27,5 @@
     "glob": "~4.0.3",
     "tape": "~2.13.3"
   },
-  "dependencies": {
-    "turf-tin": "0.0.2",
-    "turf-merge": "0.0.2"
-  }
+  "dependencies": {}
 }

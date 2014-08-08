@@ -3,7 +3,7 @@ var convex = require('../'),
   glob = require('glob'),
   fs = require('fs')
 
-var REGEN = false;
+var REGEN = true;
 
 test('intersect', function(t){
   glob.sync(__dirname + '/fixtures/in/*.geojson').forEach(function(input) {
