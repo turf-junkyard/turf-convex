@@ -1,5 +1,23 @@
 // http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript
 
+
+/**
+ * Takes a set of points and
+ * returns a [convex hull](http://en.wikipedia.org/wiki/Convex_hull) polygon.
+ *
+ * Internally this implements
+ * a [Monotone chain algorithm](http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript).
+ *
+ * @module turf/convex
+ * @param {FeatureCollection} points a collection of Features with {@link Point}
+ * geometries
+ * @returns {Feature} output a feature with {@link Polygon} geometry
+ * @example
+ * var fs = require('fs')
+ * var pts = JSON.parse(fs.readFileSync('/path/to/pts.geojson'))
+ * var hull = turf.convex(pts)
+ * console.log(hull)
+ */
 module.exports = function(fc){
   var points = fc.features.map(function(point){
     return point.geometry.coordinates;
