@@ -13,10 +13,17 @@
  * geometries
  * @returns {Feature} output a feature with {@link Polygon} geometry
  * @example
- * var fs = require('fs')
- * var pts = JSON.parse(fs.readFileSync('/path/to/pts.geojson'))
- * var hull = turf.convex(pts)
- * console.log(hull)
+ * var points = turf.featurecollection([
+ *   turf.point(10.1953125, 43.75522505306928),
+ *   turf.point(10.404052734375, 43.84245116699039),
+ *   turf.point(10.579833984375, 43.6599240747891),
+ *   turf.point(10.360107421875, 43.51668853502909),
+ *   turf.point(10.140380859375, 43.58834891179792),
+ *   turf.point(10.1953125, 43.75522505306928)]);
+ *
+ * var result = turf.featurecollection(
+ *   points.features.concat([turf.convex(points)]));
+ * //=result
  */
 module.exports = function(fc){
   var points = fc.features.map(function(point){
