@@ -9,9 +9,8 @@
  * a [Monotone chain algorithm](http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript).
  *
  * @module turf/convex
- * @param {FeatureCollection} points a collection of Features with {@link Point}
- * geometries
- * @returns {Feature} output a feature with {@link Polygon} geometry
+ * @param {FeatureCollection} points a collection of {@link Point} features
+ * @returns {Feature} a {@link Polygon} feature
  * @example
  * var points = turf.featurecollection([
  *   turf.point(10.1953125, 43.75522505306928),
