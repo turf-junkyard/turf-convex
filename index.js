@@ -13,12 +13,12 @@
  * @returns {Feature} a {@link Polygon} feature
  * @example
  * var points = turf.featurecollection([
- *   turf.point(10.1953125, 43.75522505306928),
- *   turf.point(10.404052734375, 43.84245116699039),
- *   turf.point(10.579833984375, 43.6599240747891),
- *   turf.point(10.360107421875, 43.51668853502909),
- *   turf.point(10.140380859375, 43.58834891179792),
- *   turf.point(10.1953125, 43.75522505306928)]);
+ *   turf.point(10.195312, 43.755225),
+ *   turf.point(10.404052, 43.8424511),
+ *   turf.point(10.579833, 43.659924),
+ *   turf.point(10.360107, 43.516688),
+ *   turf.point(10.14038, 43.588348),
+ *   turf.point(10.195312, 43.755225)]);
  *
  * var result = turf.featurecollection(
  *   points.features.concat([turf.convex(points)]));
