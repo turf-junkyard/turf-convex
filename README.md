@@ -2,7 +2,7 @@ turf-convex
 ===============
 [![build status](https://secure.travis-ci.org/Turfjs/turf-convex.png)](http://travis-ci.org/Turfjs/turf-convex)
 
-Takes a set of points and returns a convex hull polygon.
+Takes a GeoJSON object and returns a convex hull polygon of its vertices.
 
 ###Install
 
