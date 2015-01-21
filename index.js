@@ -14,12 +14,12 @@ var each = require('turf-meta').coordEach;
  * @returns {Feature} a {@link Polygon} feature
  * @example
  * var points = turf.featurecollection([
- *   turf.point(10.195312, 43.755225),
- *   turf.point(10.404052, 43.8424511),
- *   turf.point(10.579833, 43.659924),
- *   turf.point(10.360107, 43.516688),
- *   turf.point(10.14038, 43.588348),
- *   turf.point(10.195312, 43.755225)]);
+ *   turf.point([10.195312, 43.755225]),
+ *   turf.point([10.404052, 43.8424511]),
+ *   turf.point([10.579833, 43.659924]),
+ *   turf.point([10.360107, 43.516688]),
+ *   turf.point([10.14038, 43.588348]),
+ *   turf.point([10.195312, 43.755225])]);
  *
  * var result = turf.featurecollection(
  *   points.features.concat([turf.convex(points)]));
