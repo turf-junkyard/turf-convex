@@ -3,7 +3,7 @@ var each = require('turf-meta').coordEach;
 // http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript
 
 /**
- * Takes a set of points and
+ * Takes a {@link FeatureCollection} of {@link Point} features and
  * returns a [convex hull](http://en.wikipedia.org/wiki/Convex_hull) polygon.
  *
  * Internally this implements
@@ -21,8 +21,11 @@ var each = require('turf-meta').coordEach;
  *   turf.point([10.14038, 43.588348]),
  *   turf.point([10.195312, 43.755225])]);
  *
+ * var hull = turf.convex(points);
+ *
  * var result = turf.featurecollection(
- *   points.features.concat([turf.convex(points)]));
+ *   points.features.concat(hull));
+ *
  * //=result
  */
 module.exports = function(fc){
