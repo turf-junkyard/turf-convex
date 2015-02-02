@@ -3,8 +3,8 @@ var each = require('turf-meta').coordEach;
 // http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript
 
 /**
- * Takes a {@link FeatureCollection} of {@link Point} features and
- * returns a [convex hull](http://en.wikipedia.org/wiki/Convex_hull) polygon.
+ * Takes any {@link GeoJSON} object and returns a 
+ * [convex hull](http://en.wikipedia.org/wiki/Convex_hull) polygon.
  *
  * Internally this implements
  * a [Monotone chain algorithm](http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript).
