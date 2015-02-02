@@ -7,8 +7,8 @@
 
 ### `turf.convex(input)`
 
-Takes a FeatureCollection of Point features and
-returns a [convex hull](http://en.wikipedia.org/wiki/Convex_hull) polygon.
+Takes any GeoJSON object and returns a 
+[convex hull](http://en.wikipedia.org/wiki/Convex_hull) polygon.
 
 Internally this implements
 a [Monotone chain algorithm](http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript).
