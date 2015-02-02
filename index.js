@@ -10,7 +10,7 @@ var each = require('turf-meta').coordEach;
  * a [Monotone chain algorithm](http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript).
  *
  * @module turf/convex
- * @param {GeoJSON} input any GeoJSON object
+ * @param {FeatureCollection} input a FeatureCollection of Point features
  * @returns {Feature} a {@link Polygon} feature
  * @example
  * var points = turf.featurecollection([
