@@ -32,6 +32,8 @@
     "doxme": "^1.4.2"
   },
   "dependencies": {
-    "turf-meta": "^1.0.1"
+    "convex-hull": "^1.0.3",
+    "turf-meta": "^1.0.1",
+    "turf-polygon": "^1.0.2"
   }
 }

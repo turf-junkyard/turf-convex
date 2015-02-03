@@ -1,13 +1,14 @@
-var each = require('turf-meta').coordEach;
-
-// http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript
+var each = require('turf-meta').coordEach,
+    convexHull = require('convex-hull'),
+    polygon = require('turf-polygon');
 
 /**
- * Takes any {@link GeoJSON} object and returns a 
+ * Takes any {@link GeoJSON} object and returns a
  * [convex hull](http://en.wikipedia.org/wiki/Convex_hull) polygon.
  *
- * Internally this implements
- * a [Monotone chain algorithm](http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript).
+ * Internally this uses
+ * the [convex-hull](https://github.com/mikolalysenko/convex-hull) module that
+ * implements a [monotone chain hull](http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain).
  *
  * @module turf/convex
  * @param {GeoJSON} input any GeoJSON object
@@ -28,45 +29,14 @@ var each = require('turf-meta').coordEach;
  *
  * //=result
  */
-module.exports = function(fc){
-  var i, points = [], lower = [], upper = [];
-
-  each(fc, function(coord) {
-      points.push(coord);
-  });
-
-  points.sort(function(a, b) {
-    return a[0] == b[0] ? a[1] - b[1] : a[0] - b[0];
-  });
-
-  for (i = 0; i < points.length; i++) {
-    while (lower.length >= 2 && cross(lower[lower.length - 2], lower[lower.length - 1], points[i]) <= 0) {
-       lower.pop();
-    }
-    lower.push(points[i]);
+module.exports = function(fc) {
+  var points = [];
+  each(fc, function(coord) { points.push(coord); });
+  var hull = convexHull(points);
+  var ring = [];
+  for (var i = 0; i < hull.length; i++) {
+      ring.push(points[hull[i][0]]);
   }
-
-  for (i = points.length - 1; i >= 0; i--) {
-    while (upper.length >= 2 && cross(upper[upper.length - 2], upper[upper.length - 1], points[i]) <= 0) {
-       upper.pop();
-    }
-    upper.push(points[i]);
-  }
-
-  upper.pop();
-  lower.pop();
-  var coords = lower.concat(upper);
-  coords.push(coords[0]);
-  return {
-    type:'Feature',
-    properties: {},
-    geometry: {
-      type:'Polygon',
-      coordinates: [coords]
-    }
-  };
+  ring.push(points[hull[hull.length - 1][1]]);
+  return polygon([ring]);
 };
-
-function cross(o, a, b) {
-   return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);
-}
