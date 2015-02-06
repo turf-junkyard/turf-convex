@@ -26,14 +26,14 @@
   "homepage": "https://github.com/Turfjs/turf-convex",
   "devDependencies": {
     "benchmark": "^1.0.0",
-    "glob": "~4.3.1",
-    "tape": "~3.0.3",
+    "glob": "~4.3.5",
+    "tape": "~3.5.0",
     "dox": "^0.6.1",
-    "doxme": "^1.4.2"
+    "doxme": "^1.4.3"
   },
   "dependencies": {
     "convex-hull": "^1.0.3",
-    "turf-meta": "^1.0.1",
+    "turf-meta": "^1.0.2",
     "turf-polygon": "^1.0.2"
   }
 }
