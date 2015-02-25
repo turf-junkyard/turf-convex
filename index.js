@@ -3,7 +3,7 @@ var each = require('turf-meta').coordEach,
     polygon = require('turf-polygon');
 
 /**
- * Takes any {@link GeoJSON} object and returns a
+ * Takes points and returns a
  * [convex hull](http://en.wikipedia.org/wiki/Convex_hull) polygon.
  *
  * Internally this uses
@@ -12,8 +12,8 @@ var each = require('turf-meta').coordEach,
  *
  * @module turf/convex
  * @category transformation
- * @param {GeoJSON} input any GeoJSON object
- * @returns {Feature} a {@link Polygon} feature
+ * @param {FeatureCollection<Point>} input input points
+ * @returns {Feature<Polygon>} a convex hull
  * @example
  * var points = {
  *   "type": "FeatureCollection",
