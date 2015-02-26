@@ -3,7 +3,7 @@ var each = require('turf-meta').coordEach,
     polygon = require('turf-polygon');
 
 /**
- * Takes points and returns a
+ * Takes a set of {@link Point|points} and returns a
  * [convex hull](http://en.wikipedia.org/wiki/Convex_hull) polygon.
  *
  * Internally this uses
