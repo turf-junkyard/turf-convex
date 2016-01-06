@@ -1,6 +1,6 @@
 var each = require('turf-meta').coordEach,
-    convexHull = require('convex-hull'),
-    polygon = require('turf-polygon');
+  convexHull = require('convex-hull'),
+  polygon = require('turf-polygon');
 
 /**
  * Takes a set of {@link Point|points} and returns a
@@ -74,13 +74,13 @@ var each = require('turf-meta').coordEach,
  *
  * //=result
  */
-module.exports = function(fc) {
+module.exports = function (fc) {
   var points = [];
-  each(fc, function(coord) { points.push(coord); });
+  each(fc, function (coord) { points.push(coord); });
   var hull = convexHull(points);
   var ring = [];
   for (var i = 0; i < hull.length; i++) {
-      ring.push(points[hull[i][0]]);
+    ring.push(points[hull[i][0]]);
   }
   ring.push(points[hull[hull.length - 1][1]]);
   return polygon([ring]);
