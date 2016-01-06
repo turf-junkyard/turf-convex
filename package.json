@@ -1,12 +1,14 @@
 {
   "name": "turf-convex",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "lint": "eslint index.js test/*.js",
+    "pretest": "npm run lint",
     "test": "tape test/*.js",
     "doc": "dox -r < index.js | doxme --readme > README.md"
   },
@@ -23,13 +25,22 @@
   "bugs": {
     "url": "https://github.com/Turfjs/turf-convex/issues"
   },
+  "eslintConfig": {
+    "extends": "mourner",
+    "rules": {
+      "strict": [1],
+      "indent": [2, 2, {"SwitchCase": 1}]
+    }
+  },
   "homepage": "https://github.com/Turfjs/turf-convex",
   "devDependencies": {
     "benchmark": "^1.0.0",
-    "glob": "~4.3.5",
-    "tape": "~3.5.0",
     "dox": "^0.6.1",
-    "doxme": "^1.4.3"
+    "doxme": "^1.4.3",
+    "eslint": "^1.10.3",
+    "eslint-config-mourner": "^1.0.1",
+    "glob": "~4.3.5",
+    "tape": "~3.5.0"
   },
   "dependencies": {
     "convex-hull": "^1.0.3",
